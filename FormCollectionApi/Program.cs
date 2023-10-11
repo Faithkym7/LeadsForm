@@ -28,6 +28,11 @@ namespace FormCollectionApi
                 app.UseSwaggerUI();
             }
 
+            app.UseCors(ops =>
+            {
+                ops.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
+
             app.UseAuthorization();
 
 
